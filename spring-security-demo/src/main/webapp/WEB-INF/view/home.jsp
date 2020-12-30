@@ -16,10 +16,22 @@
 	<hr>
 	<!-- Display username and roles -->
 	<p>
-		User: <security:authentication property="principal.username" />
-		<br>
-		<br> 
-		Role(s):<security:authentication property="principal.authorities" />
+		User:
+		<security:authentication property="principal.username" />
+		<br> <br> Role(s):
+		<security:authentication property="principal.authorities" />
+	</p>
+	<hr>
+	<!-- add a link to point to leaders...this is for managers -->
+	<p>
+		<a href="${pageContext.request.contextPath}/leaders">Leadership
+			Meeting</a> (Only for Managers)
+	</p>
+	<hr>
+	<!-- add a link to point to systems....this is for admins -->
+	<p>
+		<a href="${pageContext.request.contextPath}/systems">It System
+			Meeting</a> (Only for Admins)
 	</p>
 	<hr>
 	<!-- add a logout button -->
